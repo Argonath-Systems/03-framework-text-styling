@@ -11,12 +11,12 @@ public class TextStylingLibPlugin extends JavaPlugin {
 
     public TextStylingLibPlugin(JavaPluginInit init) {
         super(init);
-        LOGGER.atInfo().log("Initializing Text Styling Lib...")
+        LOGGER.atInfo().log("Initializing Text Styling Lib...");
     }
 
     @Override
     protected void setup() {
         super.setup();
-        LOGGER.atInfo().log("Text Styling Lib enabled.")
+        LOGGER.atInfo().log("Text Styling Lib enabled.");
     }
 }
