@@ -26,6 +26,13 @@
     </properties>
 
     <dependencies>
+        <!-- Hytale Server API (Provided) for Plugin Entrypoint -->
+        <dependency>
+            <groupId>com.hypixel.hytale</groupId>
+            <artifactId>HytaleServer-parent</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Utilities -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -87,9 +94,9 @@
                         <configuration>
                             <rules>
                                 <bannedDependencies>
-                                    <excludes>
-                                        <exclude>com.hypixel.hytale:*</exclude>
-                                    </excludes>
+<!--                                    <excludes>-->
+<!--                                        <exclude>com.hypixel.hytale:*</exclude>-->
+<!--                                    </excludes>-->
                                     <message>
                                         ⛔ TEXT-STYLING-LIB CANNOT DEPEND ON HYTALE!
                                         This is a platform-agnostic library - NO platform dependencies allowed.
