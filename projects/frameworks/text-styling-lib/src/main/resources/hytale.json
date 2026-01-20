@@ -1,0 +1,9 @@
+{
+  "name": "TextStylingLib",
+  "schemaVersion": 1,
+  "version": "1.0.0-SNAPSHOT",
+  "main": "",
+  "description": "Unified text component system and styling library",
+  "group": "ArgonathSystems",
+  "dependencies": []
+}
