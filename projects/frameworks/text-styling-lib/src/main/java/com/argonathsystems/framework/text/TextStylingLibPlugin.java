@@ -2,7 +2,7 @@ package com.argonathsystems.framework.text;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import com.hypixel.hytale.logger.HytaleLogger;
+import java.util.logging.Logger;
 
 
 public class TextStylingLibPlugin extends JavaPlugin {
@@ -11,12 +11,12 @@ public class TextStylingLibPlugin extends JavaPlugin {
 
     public TextStylingLibPlugin(JavaPluginInit init) {
         super(init);
-        LOGGER.atInfo().log("Initializing Text Styling Lib...");
+        LOGGER.info("Initializing Text Styling Lib...");
     }
 
     @Override
     protected void setup() {
         super.setup();
-        LOGGER.atInfo().log("Text Styling Lib enabled.");
+        LOGGER.info("Text Styling Lib enabled.");
     }
 }
