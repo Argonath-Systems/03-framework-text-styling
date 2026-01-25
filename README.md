@@ -1,5 +1,17 @@
 # Text Styling Library
 
+> **Platform-agnostic rich text formatting, i18n, and component system**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Argonath--Systems-181717?logo=github)](https://github.com/Argonath-Systems/03-framework-text-styling)
+[![Maven](https://img.shields.io/badge/Maven-Central-C71A36?logo=apache-maven)](https://maven.apache.org/)
+[![Java](https://img.shields.io/badge/Java-25-orange?logo=openjdk)](https://openjdk.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](../LICENSE)
+[![Website](https://img.shields.io/badge/Docs-argonath--systems.github.io-blue)](https://argonath-systems.github.io/00-Argonath-Wiki)
+
+---
+
+## 📋 Overview
+
 Platform-agnostic library for rich text styling, component handling, internationalization (I18N), and serialization.
 
 ## Features
@@ -218,6 +230,34 @@ String compact = serializer.toCompactJson(component);
 - `TextParser` - Simple legacy parser
 - `ComponentSerializer` - JSON serialization
 
-## License
+---
 
-MIT License
+## 📚 Documentation
+
+- 🌐 [**Documentation Website**](https://argonath-systems.github.io/00-Argonath-Wiki)
+- 📖 [**Text Styling Guide**](https://argonath-systems.github.io/00-Argonath-Wiki/docs/api/text-styling.html)
+- 🎨 [**MiniMessage Documentation**](https://docs.advntr.dev/minimessage/)
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for development guidelines.
+
+## 💬 Community
+
+- 💬 [**Discord**](https://discord.gg/RK3MtpyH) - Chat and support
+- 🐛 [**Issues**](https://github.com/orgs/Argonath-Systems/issues) - Bug reports
+- 📖 [**Discussions**](https://github.com/orgs/Argonath-Systems/discussions) - Q&A
+
+## 📄 License
+
+MIT License - Copyright © 2025 Argonath Systems. See [LICENSE](../LICENSE) for details.
+
+---
+
+<div align="center">
+
+Part of the [**Argonath Systems**](https://github.com/orgs/Argonath-Systems/) ecosystem
+
+[Documentation](https://argonath-systems.github.io/00-Argonath-Wiki) • [Discord](https://discord.gg/RK3MtpyH) • [GitHub](https://github.com/orgs/Argonath-Systems/)
+
+</div>
