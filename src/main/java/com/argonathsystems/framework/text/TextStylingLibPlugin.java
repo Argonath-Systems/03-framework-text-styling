@@ -2,7 +2,6 @@ package com.argonathsystems.framework.text;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import java.util.logging.Level;
 
 /**
  * Plugin entry point for the Text Styling Library.
@@ -17,6 +16,6 @@ public class TextStylingLibPlugin extends JavaPlugin {
     }
 
     protected void setup() {
-        getLogger().at(Level.INFO).log("Text Styling Library loaded (library mode).");
+        getLogger().info("Text Styling Library loaded (library mode).");
     }
 }
