@@ -2,21 +2,20 @@ package com.argonathsystems.framework.text;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import java.util.logging.Logger;
 
-
+/**
+ * Plugin entry point for the Text Styling Library.
+ * 
+ * <p>This library provides platform-agnostic text styling and component systems.
+ * The actual Hytale text component integration is handled by the adapter layer.</p>
+ */
 public class TextStylingLibPlugin extends JavaPlugin {
-    
-    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
     public TextStylingLibPlugin(JavaPluginInit init) {
         super(init);
-        LOGGER.info("Initializing Text Styling Lib...");
     }
 
-    @Override
     protected void setup() {
-        super.setup();
-        LOGGER.info("Text Styling Lib enabled.");
+        getLogger().info("Text Styling Library loaded (library mode).");
     }
 }
