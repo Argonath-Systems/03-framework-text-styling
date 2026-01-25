@@ -67,7 +67,7 @@ dependencies {
 
 ## 🏷️ Tags
 
-`text styling formatting adventure minimessage colors` `library` `framework` `hytale` `lord-of-the-tales` `argonath-systems`
+`text styling formatting adventure minimessage colors` `library` `framework` `hytale` `argonath` `argonath-systems`
 
 ## 🔗 Dependencies
 
