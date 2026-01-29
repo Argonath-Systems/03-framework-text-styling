@@ -15,7 +15,18 @@ public class TextStylingLibPlugin extends JavaPlugin {
         super(init);
     }
 
-    protected void setup() {
-        getLogger().info("Text Styling Library loaded (library mode).");
+    @Override
+    public void setup() {
+        getLogger().info("Text Styling Library setup complete");
+    }
+    
+    @Override
+    public void start() {
+        getLogger().info("Text Styling Library started");
+    }
+    
+    @Override
+    public void stop() {
+        getLogger().info("Text Styling Library stopped");
     }
 }
