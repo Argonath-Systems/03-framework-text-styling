@@ -26,13 +26,6 @@
     </properties>
 
     <dependencies>
-        <!-- Hytale Server API (Provided) for Plugin Entrypoint -->
-        <dependency>
-            <groupId>com.hypixel.hytale</groupId>
-            <artifactId>HytaleServer-parent</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <!-- Utilities -->
         <dependency>
             <groupId>com.google.code.gson</groupId>

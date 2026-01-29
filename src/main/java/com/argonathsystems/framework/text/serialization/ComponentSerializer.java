@@ -136,11 +136,11 @@ public class ComponentSerializer {
                 obj.addProperty("translate", translatable.key().fullKey());
                 if (!translatable.arguments().isEmpty()) {
                     JsonArray with = new JsonArray();
-                    for (Object arg : translatable.arguments()) {
-                        if (arg instanceof Component comp) {
-                            with.add(context.serialize(comp));
+                    for (var arg : translatable.arguments()) {
+                        if (arg instanceof com.argonathsystems.framework.text.i18n.TranslationArgument.ComponentArg ca) {
+                            with.add(context.serialize(ca.component()));
                         } else {
-                            with.add(String.valueOf(arg));
+                            with.add(arg.asString());
                         }
                     }
                     obj.add("with", with);
@@ -225,9 +225,10 @@ public class ComponentSerializer {
                 if (obj.has("with")) {
                     for (JsonElement arg : obj.getAsJsonArray("with")) {
                         if (arg.isJsonObject() || arg.isJsonArray()) {
-                            translatable.argument(context.deserialize(arg, Component.class));
+                            Component argComp = context.deserialize(arg, Component.class);
+                            translatable.argumentComponent(argComp);
                         } else {
-                            translatable.argument(arg.getAsString());
+                            translatable.argumentString(arg.getAsString());
                         }
                     }
                 }
