@@ -301,22 +301,22 @@ public final class LegacySerializer implements ComponentVisitor<String> {
     
     private static Style.Builder applyLegacyCode(Style.Builder builder, char code) {
         return switch (code) {
-            case '0' -> builder.color(TextColor.of("black", 0, 0, 0));
-            case '1' -> builder.color(TextColor.of("dark_blue", 0, 0, 170));
-            case '2' -> builder.color(TextColor.of("dark_green", 0, 170, 0));
-            case '3' -> builder.color(TextColor.of("dark_aqua", 0, 170, 170));
-            case '4' -> builder.color(TextColor.of("dark_red", 170, 0, 0));
-            case '5' -> builder.color(TextColor.of("dark_purple", 170, 0, 170));
-            case '6' -> builder.color(TextColor.of("gold", 255, 170, 0));
-            case '7' -> builder.color(TextColor.of("gray", 170, 170, 170));
-            case '8' -> builder.color(TextColor.of("dark_gray", 85, 85, 85));
-            case '9' -> builder.color(TextColor.of("blue", 85, 85, 255));
-            case 'a' -> builder.color(TextColor.of("green", 85, 255, 85));
-            case 'b' -> builder.color(TextColor.of("aqua", 85, 255, 255));
-            case 'c' -> builder.color(TextColor.of("red", 255, 85, 85));
-            case 'd' -> builder.color(TextColor.of("light_purple", 255, 85, 255));
-            case 'e' -> builder.color(TextColor.of("yellow", 255, 255, 85));
-            case 'f' -> builder.color(TextColor.of("white", 255, 255, 255));
+            case '0' -> builder.color(colorFromRgb("black", 0, 0, 0));
+            case '1' -> builder.color(colorFromRgb("dark_blue", 0, 0, 170));
+            case '2' -> builder.color(colorFromRgb("dark_green", 0, 170, 0));
+            case '3' -> builder.color(colorFromRgb("dark_aqua", 0, 170, 170));
+            case '4' -> builder.color(colorFromRgb("dark_red", 170, 0, 0));
+            case '5' -> builder.color(colorFromRgb("dark_purple", 170, 0, 170));
+            case '6' -> builder.color(colorFromRgb("gold", 255, 170, 0));
+            case '7' -> builder.color(colorFromRgb("gray", 170, 170, 170));
+            case '8' -> builder.color(colorFromRgb("dark_gray", 85, 85, 85));
+            case '9' -> builder.color(colorFromRgb("blue", 85, 85, 255));
+            case 'a' -> builder.color(colorFromRgb("green", 85, 255, 85));
+            case 'b' -> builder.color(colorFromRgb("aqua", 85, 255, 255));
+            case 'c' -> builder.color(colorFromRgb("red", 255, 85, 85));
+            case 'd' -> builder.color(colorFromRgb("light_purple", 255, 85, 255));
+            case 'e' -> builder.color(colorFromRgb("yellow", 255, 255, 85));
+            case 'f' -> builder.color(colorFromRgb("white", 255, 255, 255));
             case 'k' -> builder.obfuscated(true);
             case 'l' -> builder.bold(true);
             case 'm' -> builder.strikethrough(true);
@@ -325,5 +325,10 @@ public final class LegacySerializer implements ComponentVisitor<String> {
             case 'r' -> Style.builder();  // Reset - return fresh builder
             default -> builder;
         };
+    }
+    
+    private static TextColor colorFromRgb(String name, int r, int g, int b) {
+        int rgb = (r << 16) | (g << 8) | b;
+        return new TextColor(rgb, name);
     }
 }
