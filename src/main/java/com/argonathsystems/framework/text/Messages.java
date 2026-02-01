@@ -413,6 +413,18 @@ public final class Messages {
         }
         
         /**
+         * Append styled text.
+         * 
+         * @param text The text to append
+         * @param color The color to use
+         * @return This builder
+         */
+        public MessageBuilder append(String text, TextColor color) {
+            root.append(Component.text(text, Style.of(color)));
+            return this;
+        }
+        
+        /**
          * Append a space.
          * 
          * @return This builder
